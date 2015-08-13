@@ -39,6 +39,7 @@ public class GMailSenderImpl  implements KangMailSender{
 		
 		// 임시로 작성해보자. 브랜치를 바꿔서. localDev2로.
 		// 문서의 수정이 일어나면, 수정이 되었다고 파일 왼쪽에 > 표시가 추가 될 것이다.
+		// 다시수정
 	
 	      PROPS = new Properties();
 	      PROPS.put("mail.smtp.auth", "true");
