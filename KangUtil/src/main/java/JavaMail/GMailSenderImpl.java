@@ -36,6 +36,8 @@ public class GMailSenderImpl  implements KangMailSender{
 	
 	
 	private GMailSenderImpl() {
+		
+		// 임시로 작성해보자. 브랜치를 바꿔서. localDev2로.
 	
 	      PROPS = new Properties();
 	      PROPS.put("mail.smtp.auth", "true");
