@@ -1,4 +1,4 @@
-package JavaMail;
+package com.util.javaMail;
 
 import java.io.File;
 
