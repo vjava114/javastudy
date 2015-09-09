@@ -107,8 +107,16 @@ public class Temp1 {
 		
 	}
 	
+	
+	
+	
+	
+	
+	
+	
 	@Override
 	public int hashCode() {
+		// eclipse 切疑持失
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((abc == null) ? 0 : abc.hashCode());
@@ -117,6 +125,7 @@ public class Temp1 {
 	}
 	@Override
 	public boolean equals(Object obj) {
+		// eclipse 切疑持失
 		if (this == obj)
 			return true;
 		if (obj == null)
