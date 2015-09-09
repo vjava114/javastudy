@@ -3,8 +3,23 @@ package com.study.basic1.hashcode;
 public class Temp1 {
 
 
-
+	
+	public static void main(String[] args) {
+	
+		Temp1 t = new Temp1();
+		
+		t.whatIsHashCode();		// practiece 1
+		t.funnyTest1_1();		// practiece 2
+		
+	}
+	
+	
+	
+	
+	
+	
 	private String data = null;
+	
 	public String getData() {
 		return data;
 	}
@@ -13,19 +28,8 @@ public class Temp1 {
 	}
 
 
-	public  String abc= "A";
+	public String abc= "A";
 	public static String s_abc = "A";
-	
-	public static void main(String[] args) {
-	
-		Temp1 t = new Temp1();
-
-		
-//		t.whatIsHashCode();
-		t.funnyTest1_1();
-		
-	}
-	
 	
 
 	/**
