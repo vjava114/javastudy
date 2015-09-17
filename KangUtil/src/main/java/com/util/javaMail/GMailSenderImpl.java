@@ -44,12 +44,6 @@ public class GMailSenderImpl  implements KangMailSender{
 	      PROPS.put("mail.smtp.host", "smtp.gmail.com");
 	      PROPS.put("mail.smtp.port", "587");
 	      
-	       Properties p=  SESSION.getProperties();
-	       Enumeration e = p.elements();
-	       while (e.hasMoreElements()) {
-			String object = (String) e.nextElement();
-			System.out.println("nextElement : " + object);
-		}
 	       
 	      // Get the Session object.
 	      SESSION = Session.getInstance(PROPS,
