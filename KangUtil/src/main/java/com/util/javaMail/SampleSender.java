@@ -11,11 +11,7 @@ public class SampleSender {
 		KangMailSender sender = GMailSenderImpl.getInstance();
 		
 		sender.addFile(new File("a"));
-		
-		for(int i=0; i<2; i++){
-			
-			sender.sendMail("郴侩", "力格", "vjava114@gmail.com");
-		}
+		sender.sendMail("郴侩", "力格", "vjava114@gmail.com");
 		
 		
 		

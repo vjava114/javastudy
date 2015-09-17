@@ -2,6 +2,7 @@ package com.util.javaMail;
 
 import java.io.File;
 import java.io.PrintStream;
+import java.util.Enumeration;
 import java.util.Properties;
 
 import javax.mail.Message;
@@ -36,13 +37,20 @@ public class GMailSenderImpl  implements KangMailSender{
 	
 	
 	private GMailSenderImpl() {
-	
+		
 	      PROPS = new Properties();
 	      PROPS.put("mail.smtp.auth", "true");
 	      PROPS.put("mail.smtp.starttls.enable", "true");
 	      PROPS.put("mail.smtp.host", "smtp.gmail.com");
 	      PROPS.put("mail.smtp.port", "587");
 	      
+	       Properties p=  SESSION.getProperties();
+	       Enumeration e = p.elements();
+	       while (e.hasMoreElements()) {
+			String object = (String) e.nextElement();
+			System.out.println("nextElement : " + object);
+		}
+	       
 	      // Get the Session object.
 	      SESSION = Session.getInstance(PROPS,
 	      new javax.mail.Authenticator() {
@@ -51,7 +59,8 @@ public class GMailSenderImpl  implements KangMailSender{
 	         }
 	      });
 
-	      SESSION.setDebug(true);
+	      SESSION.setDebug(false);
+
 	}
 	
 	
@@ -66,14 +75,11 @@ public class GMailSenderImpl  implements KangMailSender{
 	public void sendMail(String msg_, String title_, String receiverAddr_) {
 
 		String[] rcv = new String[]{receiverAddr_};
-		
 		sendExcecute(msg_, title_, rcv);
 
 	}
 
 	public void sendMail(String msg_, String title_, String[] receiverAddr_) {
-		// TODO Auto-generated method stub
-		
 		sendExcecute(msg_, title_, receiverAddr_);
 	}
 
@@ -81,6 +87,7 @@ public class GMailSenderImpl  implements KangMailSender{
 	
 	private static void sendExcecute(String msg_, String title_, String[] receiverAddr_){
 	      try {
+	    	  
 		         // Create a default MimeMessage object.
 		         Message message = new MimeMessage(SESSION);
 
