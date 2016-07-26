@@ -16,9 +16,9 @@ import javax.mail.internet.MimeMessage;
 public class GMailSenderImpl  implements KangMailSender{
 
 	private final static String FROM = "vjava114@gmail.com";
-	private final static String USERNAME = "YOUR NAME";
-	private final static String PASSWORD = "YOUR PASSWORD";
-	private final static String FROM_NICK = "YOUR NICK_NAME";
+	private final static String USERNAME = "vjava114";
+	private final static String PASSWORD = "Wnsdud12!";
+	private final static String FROM_NICK = "강준영";
 	
 	
 	private static Properties PROPS = null;
